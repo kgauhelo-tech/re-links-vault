@@ -66,7 +66,7 @@ const readAllLinks = () => {
   if (links.length >= 0) return links;
 };
 
-const updateLink = (
+const updateLinkById = (
   id: number,
   title: string,
   link: string,
@@ -104,4 +104,4 @@ const deleteLink = (id: number) => {
   if (index > -1) links.splice(index, 1);
 };
 
-export { createLink, readLink, readAllLinks, updateLink, deleteLink };
+export { createLink, readLink, readAllLinks, updateLinkById, deleteLink };
