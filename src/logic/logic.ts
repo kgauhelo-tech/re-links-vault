@@ -101,7 +101,12 @@ const deleteLink = (id: number) => {
   getLinks();
   const index = links.findIndex((link) => link.id === id);
 
-  if (index > -1) links.splice(index, 1);
+  if (index > -1) {
+    links.splice(index, 1);
+    return 0;
+  }
+
+  return -1;
 };
 
 export { createLink, readLink, readAllLinks, updateLinkById, deleteLink };
