@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+}
+
+.title {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: calc(16px * 1.618);
+  font-weight: 800;
+}
+
+.heading {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: calc(16px * 1.418);
+  font-weight: 700;
+}
+
+.paragraph {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
