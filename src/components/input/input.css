@@ -1,0 +1,88 @@
+/* button styling */
+
+button {
+  cursor: pointer;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+}
+
+.delete {
+  background-color: var(--light-red);
+  border: none;
+  color: var(--white);
+  transition: all ease-in-out 0.2s;
+}
+
+.delete:hover {
+  color: var(--light-red);
+  background-color: var(--white);
+}
+
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  transition: all ease-in-out 0.2s;
+}
+
+.primary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.secondary {
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+  transition: all ease-in-out 0.2s;
+}
+
+.secondary:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+/* Input Fields Styling */
+
+/* Text Area Styling */
+.description-input,
+.text-input {
+  padding: 8px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+}
+
+.description-input {
+  resize: none;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.chars {
+  font-weight: normal;
+  text-transform: none;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error {
+  padding: 4px 0;
+  font-size: 15px;
+  color: var(--light-red);
+}
