@@ -34,6 +34,7 @@ button {
 .primary:hover {
   background-color: var(--white);
   color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .secondary {

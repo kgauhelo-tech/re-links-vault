@@ -4,21 +4,37 @@ import "./input.css";
 type buttonProps = {
   children: React.ReactNode;
   type?: "delete" | "primary" | "secondary";
+  oncClick: () => void;
 };
 
-export const Button: React.FC<buttonProps> = ({ children, type }) => {
+export const Button: React.FC<buttonProps> = ({ children, type, oncClick }) => {
   switch (type) {
     case "delete":
-      return <button className="delete">{children}</button>;
+      return (
+        <button onClick={oncClick} className="delete">
+          {children}
+        </button>
+      );
 
     case "primary":
-      return <button className="primary">{children}</button>;
+      return (
+        <button onClick={oncClick} className="primary">
+          {children}
+        </button>
+      );
 
     case "secondary":
-      return <button className="secondary">{children}</button>;
+      return (
+        <button onClick={oncClick} className="secondary">
+          {children}
+        </button>
+      );
 
     default:
-    case "primary":
-      return <button className="primary">{children}</button>;
+      return (
+        <button onClick={oncClick} className="primary">
+          {children}
+        </button>
+      );
   }
 };

@@ -3,22 +3,14 @@ import { Button } from "./components/input/button";
 import { Text } from "./components/text/text";
 import { TextInput } from "./components/input/input-field";
 import { SearchBar } from "./components/search-bar/search-bar";
+import { ItemContainer } from "./components/side-bar.tsx/item-container";
+import { Sidebar } from "./components/side-bar.tsx/sidebar";
+import { TitleBar } from "./components/title-bar/TitleBar";
 
 function App() {
   return (
     <>
-      <Text type="title">This is the title</Text>
-      <Text type="heading">This is the title</Text>
-      <Text type="paragraph">This is the title</Text>
-      <Text>This is the title</Text>
-      <br />
-
-      <Button>Primary Button</Button>
-      <Button type="primary">Primary Button</Button>
-      <Button type="secondary">Secondary Button</Button>
-      <Button type="delete">Delete Button</Button>
-
-      <br />
+      <TitleBar />
       <br />
       <TextInput
         type="textarea"
@@ -27,7 +19,6 @@ function App() {
       />
 
       <br />
-      <br />
       <TextInput
         type="text"
         label="Practice"
@@ -35,8 +26,8 @@ function App() {
       />
 
       <br />
+      <Sidebar></Sidebar>
       <br />
-      <SearchBar></SearchBar>
     </>
   );
 }
