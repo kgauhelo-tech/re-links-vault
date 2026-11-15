@@ -1,7 +1,7 @@
 import React from "react";
 
 type inputFieldProps = {
-  type: "textarea" | "text";
+  type: "textarea" | "text" | "link";
   label: string;
   placeholder: string;
   value?: string;
@@ -17,6 +17,11 @@ type inputFieldProps = {
 
       textAreaRef?: React.RefObject<HTMLTextAreaElement | null>;
       textInputRef?: never;
+    }
+  | {
+      type: "link";
+      textInputRef?: React.RefObject<HTMLInputElement | null>;
+      textAreaRef?: never;
     }
 );
 
@@ -64,6 +69,26 @@ export const TextInput: React.FC<inputFieldProps> = ({
             ref={textInputRef}
             placeholder={placeholder}
             maxLength={50}
+            value={value}
+          />
+          {errorMessage && <p className="error">{errorMessage}</p>}
+        </div>
+      );
+
+    case "link":
+      return (
+        <div className="input-container">
+          <label className="label" htmlFor="link-input">
+            {label} <span className="chars">{"100 characters max"}</span>
+          </label>
+          <input
+            name="link-input"
+            className="text-input"
+            id="link-input"
+            type="text"
+            ref={textInputRef}
+            placeholder={placeholder}
+            maxLength={100}
             value={value}
           />
           {errorMessage && <p className="error">{errorMessage}</p>}

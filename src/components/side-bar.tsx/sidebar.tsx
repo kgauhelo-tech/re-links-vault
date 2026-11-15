@@ -5,23 +5,26 @@ import styles from "./sidebar.module.css";
 import { Add, Trash2 } from "reicon-react";
 
 import { Button } from "../input/button";
-import { useState } from "react";
 
-export const Sidebar = () => {
-  const [selectOn, setSelectOn] = useState(false);
-  const handleSearch = () => {};
+type SidebarProps = {
+  onSearch: () => void;
+  onCreate: () => void;
+  onSelection: () => void;
+  onDelete: () => void;
+  selectionState: boolean;
+};
 
-  const handleCreate = () => {};
-
-  const handleDelete = () => {};
-  const handleSelect = () => {
-    setSelectOn(true);
-  };
-
+export const Sidebar: React.FC<SidebarProps> = ({
+  onCreate,
+  onSearch,
+  onSelection,
+  onDelete,
+  selectionState,
+}) => {
   return (
     <div className={styles["sidebar-container"]}>
       <ItemContainer title="Search Links">
-        <SearchBar onSearch={handleSearch} />
+        <SearchBar onSearch={onSearch} />
       </ItemContainer>
 
       <ItemContainer title="Total Links">
@@ -29,15 +32,15 @@ export const Sidebar = () => {
       </ItemContainer>
 
       <ItemContainer>
-        {selectOn ? (
-          <Button type="delete" oncClick={handleDelete}>
+        {selectionState ? (
+          <Button type="delete" oncClick={onDelete}>
             <span className={styles["button-content"]}>
               <Trash2 />
               Delete Selected
             </span>
           </Button>
         ) : (
-          <Button oncClick={handleSelect} type="secondary">
+          <Button oncClick={onSelection} type="secondary">
             <span className={styles["button-content"]}>
               <Trash2 />
               Delete links
@@ -45,7 +48,7 @@ export const Sidebar = () => {
           </Button>
         )}
 
-        <Button oncClick={handleCreate}>
+        <Button oncClick={onCreate}>
           <span className={styles["button-content"]}>
             <Add />
             Add link

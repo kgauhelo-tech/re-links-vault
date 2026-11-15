@@ -1,0 +1,33 @@
+.create-container {
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 16px 24px;
+
+  @media screen and (min-width: 426px) {
+    width: 85%;
+  }
+  @media screen and (min-width: 615px) {
+    width: 40%;
+  }
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-tags{
+    
+}
