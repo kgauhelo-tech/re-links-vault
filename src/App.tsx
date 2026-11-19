@@ -5,6 +5,7 @@ import { Sidebar } from "./components/side-bar.tsx/sidebar";
 import { TitleBar } from "./components/title-bar/TitleBar";
 import { useState } from "react";
 import { UpdateLink } from "./components/crud-ops/update-link";
+import { MostRecentItem } from "./components/most-recent/MostRecent";
 
 function App() {
   const [overlayOn, setOverlayOn] = useState(false);
@@ -29,7 +30,7 @@ function App() {
         ""
       )}
       {/* {overlayOn ? <UpdateLink onClose={dismissOverlay}></UpdateLink> : ""} */}
-      <TitleBar />
+      <MostRecentItem title="Touch Typing" url="keybr.com" dateCreted="today" />
       <br />
       <TextInput
         type="textarea"
