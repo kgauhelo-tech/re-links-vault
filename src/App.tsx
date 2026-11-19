@@ -2,9 +2,7 @@ import "./App.css";
 import { TextInput } from "./components/input/input-field";
 import { CreateLink } from "./components/crud-ops/create-link";
 import { Sidebar } from "./components/side-bar.tsx/sidebar";
-import { TitleBar } from "./components/title-bar/TitleBar";
 import { useState } from "react";
-import { UpdateLink } from "./components/crud-ops/update-link";
 import { MostRecentItem } from "./components/most-recent/MostRecent";
 
 function App() {
@@ -30,7 +28,14 @@ function App() {
         ""
       )}
       {/* {overlayOn ? <UpdateLink onClose={dismissOverlay}></UpdateLink> : ""} */}
-      <MostRecentItem title="Touch Typing" url="keybr.com" dateCreted="today" />
+      <MostRecentItem
+        title="Touch Typing"
+        url="keybr.com"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam
+        ad repellendus libero reiciendis nihil perferendis minima maxime maiores
+        perspiciatis."
+      />
+
       <br />
       <TextInput
         type="textarea"

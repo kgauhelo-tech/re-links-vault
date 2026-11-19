@@ -1,17 +1,17 @@
 import React from "react";
 import { Text } from "../text/text";
-import styles from "./RecentList.module.css";
+import styles from "./MostRecent.module.css";
 
 type MostRecentListProps = {
   title: string;
   url: string;
-  dateCreted: string;
+  description: string;
 };
 
 export const MostRecentItem: React.FC<MostRecentListProps> = ({
   title,
   url,
-  dateCreted,
+  description,
 }) => {
   return (
     <div className={styles["most-recent-container"]}>
@@ -58,7 +58,7 @@ export const MostRecentItem: React.FC<MostRecentListProps> = ({
           </a>
         </div>
 
-        <Text>{dateCreted}</Text>
+        <Text>{description}</Text>
       </div>
     </div>
   );
