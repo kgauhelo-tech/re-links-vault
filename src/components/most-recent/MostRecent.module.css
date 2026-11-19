@@ -1,0 +1,38 @@
+.most-recent-container {
+  height: 220px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.icon-container {
+  height: 80%;
+}
+
+.icon-container svg {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.url-container {
+  display: flex;
+  gap: 16px;
+}

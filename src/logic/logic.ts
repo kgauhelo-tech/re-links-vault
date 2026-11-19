@@ -4,6 +4,7 @@ type Link = {
   link: string;
   description: string;
   tags: string[] | null;
+  dateCreated: Date;
 };
 
 // success state 0 || failure is -1
@@ -19,6 +20,12 @@ const getLinks = () => {
   } else {
     links = JSON.parse(listOfLinks);
   }
+};
+
+const getMostRecentLink = () => {
+  links = [];
+  getLinks();
+  return links[links.length - 1];
 };
 
 const saveLinks = () => {
@@ -39,6 +46,7 @@ const createLink = (
     link,
     description,
     tags,
+    dateCreated: new Date(),
   };
 
   if (links.length >= 0) {
@@ -84,6 +92,7 @@ const updateLinkById = (
         link,
         description,
         tags,
+        dateCreated: links[index].dateCreated,
       };
 
       links[index] = updatedLink;
@@ -109,4 +118,12 @@ const deleteLink = (id: number) => {
   return -1;
 };
 
-export { createLink, readLink, readAllLinks, updateLinkById, deleteLink };
+export {
+  createLink,
+  readLink,
+  readAllLinks,
+  updateLinkById,
+  deleteLink,
+  getMostRecentLink,
+  type Link,
+};
