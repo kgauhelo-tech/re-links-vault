@@ -16,7 +16,7 @@ const getLinks = () => {
 
   const listOfLinks = localStorage.getItem("links");
   if (!listOfLinks) {
-    throw new Error("Links do not exist");
+    links = [];
   } else {
     links = JSON.parse(listOfLinks);
   }

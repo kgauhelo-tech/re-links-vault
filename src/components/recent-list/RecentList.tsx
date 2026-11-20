@@ -6,18 +6,18 @@ import { ArrowUpRight } from "reicon-react";
 
 export const RecentList: React.FC = () => {
   const mostRecentLinks: Link[] = getRecentLinks();
-  if (mostRecentLinks.length === 0) {
-    return (
-      <div className={styles["list-item-container"]}>
-        <div className={styles["text-container"]}></div>
-        <Text type="heading">Recent Links</Text>
-        <div className={styles["view-links"]}>
-          <Text>View All Links</Text>
-        </div>
-        <Text>Add items to the list to see your most recent links</Text>
-      </div>
-    );
-  }
+  // if (mostRecentLinks.length === 0) {
+  //   return (
+  //     <div className={styles["list-item-container"]}>
+  //       <div className={styles["text-container"]}></div>
+  //       <Text type="heading">Recent Links</Text>
+  //       <div className={styles["view-links"]}>
+  //         <Text>View All Links</Text>
+  //       </div>
+  //       <Text>Add items to the list to see your most recent links</Text>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className={styles["list-item-container"]}>
