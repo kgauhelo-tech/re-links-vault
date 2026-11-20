@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { TitleBar } from "../components/title-bar/TitleBar";
 import { Sidebar } from "../components/side-bar.tsx/sidebar";
 import { getMostRecentLink, type Link } from "../logic/logic";
-import { MostRecentItem} from "../components/most-recent/MostRecent";
+import { MostRecentItem } from "../components/most-recent/MostRecent";
 
 export const dashboard = () => {
   const searchRef = useRef(null);
@@ -14,7 +14,7 @@ export const dashboard = () => {
       <MostRecentItem
         title={mostRecentLink.title}
         url={mostRecentLink.link}
-        dateCreted={mostRecentLink.dateCreated.toISOString()}
+        description={mostRecentLink.description}
       ></MostRecentItem>
       <TitleBar />
       <Sidebar
