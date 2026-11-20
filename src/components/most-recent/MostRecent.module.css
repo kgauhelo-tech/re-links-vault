@@ -1,10 +1,11 @@
 .most-recent-container {
   height: 220px;
   width: 100%;
+  padding: 8px 16px;
 
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 
   background-color: var(--white);
   border-radius: 8px;
@@ -12,6 +13,9 @@
 
 .icon-container {
   height: 80%;
+  background-color: #cccccc;
+  padding: 8px;
+  border-radius: 6px;
 }
 
 .icon-container svg {
@@ -23,7 +27,8 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  width: 65%;
 }
 
 .link {

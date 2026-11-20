@@ -28,6 +28,22 @@ const getMostRecentLink = () => {
   return links[links.length - 1];
 };
 
+const getRecentLinks = () => {
+  links = [];
+  getLinks();
+  if (links.length === 1) {
+    return [];
+  }
+  let currentIndex = links.length - 2;
+  const listToReturn: Link[] = [];
+  for (let i = 0; i < 5; i++) {
+    listToReturn.push(links[currentIndex]);
+    currentIndex--;
+  }
+
+  return listToReturn;
+};
+
 const saveLinks = () => {
   localStorage.setItem("links", JSON.stringify(links));
 };
@@ -126,4 +142,5 @@ export {
   deleteLink,
   getMostRecentLink,
   type Link,
+  getRecentLinks,
 };

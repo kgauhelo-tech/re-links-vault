@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 import { TitleBar } from "../components/title-bar/TitleBar";
 import { Sidebar } from "../components/side-bar.tsx/sidebar";
 import { getMostRecentLink, type Link } from "../logic/logic";
-import { MostRecentItem } from "../components/most-recent/MostRecent";
-import styles from "./dashboard.module.css";
+import { MostRecentItem} from "../components/most-recent/MostRecent";
 
 export const dashboard = () => {
   const searchRef = useRef(null);
@@ -11,7 +10,7 @@ export const dashboard = () => {
   const [isSelectionState, setIsSelectionState] = useState(false);
 
   return (
-    <div className="main-container">
+    <div className="">
       <MostRecentItem
         title={mostRecentLink.title}
         url={mostRecentLink.link}
